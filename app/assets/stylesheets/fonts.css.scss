@@ -6,3 +6,21 @@
        asset_url('fonts/glyphicons-halflings-regular.ttf') format('truetype'),
        asset_url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg')
 }
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: asset_url('fonts/DroidKufi-Regular.eot?#iefix') format('embedded-opentype'),
+       asset_url('fonts/DroidKufi-Regular.woff') format('woff'),
+       asset_url('fonts/DroidKufi-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: asset_url('fonts/DroidKufi-Bold.eot?#iefix') format('embedded-opentype'),
+       asset_url('fonts/DroidKufi-Bold.woff') format('woff'),
+       asset_url('fonts/DroidKufi-Bold.ttf') format('truetype');
+}
