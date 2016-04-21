@@ -1,0 +1,57 @@
+ar:
+  devise:
+    confirmations:
+      confirmed: "تم تأكيد حسابك.أنت الآن مسجل الدخول"
+      send_instructions: "سوف يتم ارسال رسالة خلال دقائق تحتوي علي معلومات ﻹستعادة حسابك."
+      send_paranoid_instructions: "لو اﻹيميل الخاص بك مسجل لدينا . سوف تستلم رسالة تحتوي علي معلومات كيف يتم استعادة حسابك"
+    failure:
+      already_authenticated: "أنت بالفعل مسجل الدخول"
+      inactive: "لم يتم تفعيل حسابك بعد."
+      invalid: "اﻹيميل أو كلمة السر غير صحيح."
+      invalid_token: "رقم خطأ"
+      locked: "لقد تم غلق حسابك"
+      not_found_in_database: "اﻹيميل أو الباسورد خطأ"
+      timeout: "برجاء تسجيل الدخول."
+      unauthenticated: "تحتاج الي تسجيل الدخول قبل اﻹكمال"
+      unconfirmed: "تحتاج لتأكيد حسابك قبل اﻹكمال."
+    mailer:
+      confirmation_instructions:
+        subject: "تعليمات التأكيد"
+      reset_password_instructions:
+        subject: "معلومات استعادة كلمة السر"
+      unlock_instructions:
+        subject: "معلومات فتح الحساب"
+    omniauth_callbacks:
+      failure: "لا يمكن تسجيل دخولك %{kind} بسبب \"%{reason}\"."
+      success: "تم التسجيل بناجاح %{kind} الحساب."
+    passwords:
+      no_token: "لا يمكن دخول هذه الصفحة الا من خلال ايميل استعادة كلمة السر"
+      send_instructions: "سوف تستلم رسالة خلال دقائق علي بريدك اﻹلكتروني تحتوي علي معلومات استعادة الحساب"
+      send_paranoid_instructions: "لو اﻹيميل الخاص بك مسجل لدينا سوف تستلم رسالة تحتوي علي معلومات استعادة الحساب."
+      updated: "تم تغير كلمة السر بنجاح أنت الآن مسجل الدخول"
+      updated_not_active: "تم تغير كلمة السر بنجاح."
+    registrations:
+      destroyed: "تم الغاء حسابك بنجاح"
+      signed_up: "مرحبًًا بك. لقد سجلت بنجاح."
+      signed_up_but_inactive: "لقد سجلت بنجاح ز لكن يجب عليك اﻹنتظار حتي يتم تفعيل حسابك."
+      signed_up_but_locked: "لقد سجلت بنجاح لكن الحساب الخاص بك مغلق."
+      signed_up_but_unconfirmed: "تم ارسال رسالة الي بريدك اﻹلكتروني تحتوي علي لينك تفعيل الحساب."
+      update_needs_confirmation: "لقد تم تحديث الحساب الخاص بك بنجاح . برجاء فحص بريدك اﻹلكتروني والضغط علي لينك التفعيل"
+      updated: "لقد تم تحديث الحساب بنجاح."
+    sessions:
+      signed_in: "تم تسجيل الدخول بنجاح."
+      signed_out: "تم تسجيل الخروج بنجاح."
+    unlocks:
+      send_instructions: "سوف تستلم رسالة علي بريدك اﻹلكتروني خلال دقائق تحتوي علي معلومات لفتح حسابك."
+      send_paranoid_instructions: "لو اﻹيميل الخاص بك مسجل لدينا . سوف تستلم رسالة تحتوي علي معلومات كيف يتم استعادة حسابك"
+      unlocked: "تم فتح حسابك بنجاح برجاء تسجيل الدخلو لﻹكمال"
+  errors:
+    messages:
+      already_confirmed: "تم التأكيد بالفعل . برجاء حاول تسجيل الدخول"
+      confirmation_period_expired: "تحتاج للتأكيد خلال %{period}, من فضلك قم بطلب جديد"
+      expired: "تم اﻹنتهاء من فضلك قم بطلب جديد"
+      not_found: "لا يوجد"
+      not_locked: "غير مغلق"
+      not_saved:
+        one: "هناك خطأ يمنع %{resource} من الحفظ:"
+        other: "%{count} أخطاء تمنع %{resource} من الحفظ:"

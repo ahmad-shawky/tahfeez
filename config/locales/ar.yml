@@ -1,3 +1,18 @@
 ar:
   app_name: "دار نور الهدي"
   main_page: 'الصفحة الرئيسية'
+  accounts: 'حسابات المستخدمين'
+  edit: 'تعديل'
+  add: 'اضافة'
+  delete: 'حذف'
+  list: 'قائمة'
+  show: 'اظهار'
+  are_you_sure: 'هل أنت متأكد ؟'
+  number: 'رقم'
+  name: 'اﻹسم'
+  email: ' البريد اﻹلكتروني'
+  password: 'كلمة المرور'
+  password_confirmation: 'تأكيد كلمة المرور'
+  back: 'رجوع'
+  new_account: 'حساب جديد'
+  save: 'حفظ'

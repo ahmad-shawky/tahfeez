@@ -1,0 +1,14 @@
+ar:
+  activerecord:
+    errors:
+      models:
+        account:
+          attributes:
+            email:
+              blank: 'برجاء ادخال البريد اﻹلكتروني'
+            name:
+              blank: 'برجاء ادخال اﻹسم'
+            password:
+              blank: 'برجاء ادخال كلمة السر'
+            password_confirmation:
+              blank: 'برجاء ادخال تأكيد كلمة السر'
