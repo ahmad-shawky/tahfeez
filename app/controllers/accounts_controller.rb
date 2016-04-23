@@ -1,6 +1,8 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_account!
+
   # GET /accounts
   # GET /accounts.json
   def index
@@ -28,7 +30,7 @@ class AccountsController < ApplicationController
 
     respond_to do |format|
       if @account.save
-        format.html { redirect_to @account, notice: 'Account was successfully created.' }
+        format.html { redirect_to @account, notice: t('saved_successfully') }
         format.json { render :show, status: :created, location: @account }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class AccountsController < ApplicationController
   def update
     respond_to do |format|
       if @account.update(account_params)
-        format.html { redirect_to @account, notice: 'Account was successfully updated.' }
+        format.html { redirect_to @account, notice: t('saved_successfully') }
         format.json { render :show, status: :ok, location: @account }
       else
         format.html { render :edit }
@@ -54,10 +56,17 @@ class AccountsController < ApplicationController
   # DELETE /accounts/1
   # DELETE /accounts/1.json
   def destroy
-    @account.destroy
-    respond_to do |format|
-      format.html { redirect_to accounts_url, notice: 'Account was successfully destroyed.' }
-      format.json { head :no_content }
+    if @user == current_user || Account.count == 0
+       respond_to do |format|
+        format.html { redirect_to accounts_url , alert: t('cant_delete') }
+        format.json { head :no_content }
+      end
+    else
+      @account.destroy
+      respond_to do |format|
+        format.html { redirect_to accounts_url, notice: t('deleted_successfully') }
+        format.json { head :no_content }
+      end
     end
   end
 
@@ -69,6 +78,6 @@ class AccountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def account_params
-      params.require(:account).permit(:name)
+      params.require(:account).permit(:name, :email, :password,:password_confirmation)
     end
 end

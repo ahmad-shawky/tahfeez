@@ -1,0 +1,12 @@
+.has-error label {
+  color: #a94442;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.img-login {
+  width: 150px;
+  height: 150px;
+}

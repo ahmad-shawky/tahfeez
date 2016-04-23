@@ -6,9 +6,14 @@ ar:
           attributes:
             email:
               blank: 'برجاء ادخال البريد اﻹلكتروني'
+              invalid: 'برجاء ادخال البريد اﻹلكتروني بشكل صحيح'
             name:
               blank: 'برجاء ادخال اﻹسم'
             password:
               blank: 'برجاء ادخال كلمة السر'
+              too_short: 'كلمة السر أقصر من اللازم'
             password_confirmation:
               blank: 'برجاء ادخال تأكيد كلمة السر'
+              confirmation: 'كلمة السر لاتتطابق مع تأكيد كلمة السر'
+              too_short: 'تأكيد كلمة السر أقصر من اللازم'
+              

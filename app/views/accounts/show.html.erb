@@ -1,9 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @account.name %>
-</p>
-
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="content-box-large">
+     <% if notice %>
+     <div class="alert alert-success" role="alert">
+       <%= notice %>
+     </div>
+     <% end %>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <h3 class="text-primary"><%= t('show_account')%></h3>
+        </div>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th><%= t('name') %></th>
+                <td><%= @account.name %></td>
+              </tr>
+              <tr>
+                <th><%= t('email') %></th>
+                <td><%= @account.email %></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+      <%= link_to t('edit'), edit_account_path(@account) %> |
+      <%= link_to t('back') , accounts_path %>
+    </div>
+  </div>
+</div>

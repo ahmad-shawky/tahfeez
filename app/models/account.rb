@@ -6,4 +6,9 @@ class Account < ActiveRecord::Base
 
   # Validations
   validates :name, presence: true
+
+  # Override devise password required
+  def password_required?
+   !persisted? || !password.blank? || !password_confirmation.blank?
+  end
 end

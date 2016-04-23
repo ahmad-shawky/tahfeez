@@ -1,27 +1,35 @@
 <%= form_for(@account) do |f| %>
-    <% if @account.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
 
-        <ul>
-        <% @account.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
+    <% if @account.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <%= t 'review_errors' %>
+        </div>
     <% end %>
-    <div class="form-group">
-      <label><%= t('name') %></label>
-      <%= f.text_field :name, class: 'form-control'%>
-    </div>
-    <div class="form-group">
-      <label><%= t('password') %></label>
-      <%= f.password_field :password, class: 'form-control'%>
-    </div>
-    <div class="form-group">
-      <label><%= t('password_confirmation') %></label>
-      <%= f.password_field :password_confirmation, class: 'form-control'%>
-    </div>
+
+    <%= form_group @account.errors, :name do %>
+        <label><%= t('name') %></label>
+        <%= f.text_field :name, class: 'form-control'%>
+        <%= error_tag @account.errors, :name %>
+    <% end %>
+
+    <%= form_group @account.errors, :email do %>
+        <label><%= t('email') %></label>
+        <%= f.text_field :email, class: 'form-control'%>
+        <%= error_tag @account.errors, :email %>
+    <% end %>
+
+    <%= form_group @account.errors, :password do %>
+        <label><%= t('password') %></label>
+        <%= f.password_field :password, class: 'form-control'%>
+        <%= error_tag @account.errors, :password %>
+    <% end %>
+
+    <%= form_group @account.errors, :password_confirmation do %>
+        <label><%= t('password_confirmation') %></label>
+        <%= f.password_field :password_confirmation, class: 'form-control'%>
+        <%= error_tag @account.errors, :password_confirmation %>
+    <% end %>
+
   <div>
       <%= f.submit t('save'), class: 'btn btn-primary' %>
   </div>
