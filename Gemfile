@@ -27,6 +27,8 @@ gem 'devise', '~> 3.4.0'
 
 # Font awsome rails
 gem "font-awesome-rails"
+# Mysql2 gem
+gem "mysql2"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,6 +48,9 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # deployment
+  gem 'capistrano', '~> 3.1'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rvm'
+  gem 'capistrano-passenger'
 end
