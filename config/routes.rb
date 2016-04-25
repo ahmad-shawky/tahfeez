@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :students
   devise_for :accounts
   resources :accounts
   root 'home#index'

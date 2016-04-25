@@ -1,0 +1,60 @@
+<%= form_for(@student) do |f| %>
+  <div class="row">
+    <% if @student.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <%= t 'review_errors' %>
+        </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <%= form_group @student.errors, :name do %>
+        <label><%= t('name') %></label>
+        <%= f.text_field :name, class: 'form-control'%>
+        <%= error_tag @student.errors, :name %>
+    <% end %>
+  </div>
+
+   <div class="row">
+     <div class="col-md-2">
+        <%= form_group @student.errors, :under_age do %>
+            <label><%= t('under_age') %></label><br/>
+            <%= f.check_box :under_age, class: 'form-control'%>
+            <%= error_tag @student.errors, :under_age %>
+        <% end %>
+     </div>
+     <div class="col-md-5">
+      <%= form_group @student.errors, :age do %>
+          <label><%= t('age') %></label>
+          <%= f.text_field :age, class: 'form-control'%>
+          <%= error_tag @student.errors, :age %>
+      <% end %>
+   </div>
+   <div class="col-md-5">
+     <%= form_group @student.errors, :joining_date do %>
+         <label><%= t('joining_date') %></label>
+         <%= f.text_field :joining_date, class: 'form-control datepicker'%>
+         <%= error_tag @student.errors, :joining_date %>
+     <% end %>
+   </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <%= form_group @student.errors, :image do %>
+          <label><%= t('image') %></label>
+          <%= f.file_field :image, class: 'form-control'%>
+          <%= f.hidden_field :image_cache %>
+          <%= error_tag @student.errors, :image %>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <%=
+      image_tag @student.image_url(:thumb) if @student.image?
+      %>
+    </div>
+  </div>
+
+  <div class="row">
+      <%= f.submit t('save'), class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
 
+  /*
+  * Handle menu
+  */
   $(".submenu > a").click(function(e) {
     e.preventDefault();
     var $li = $(this).parent("li");
@@ -16,5 +19,10 @@ $(document).ready(function(){
       $li.addClass("open");
     }
   });
-  
+
+  /*
+  * Handle date picker
+  */
+  $('.datepicker').datepicker({dateFormat: "dd-mm-yy"});
+
 });

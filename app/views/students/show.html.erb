@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="content-box-large">
+     <% if notice %>
+     <div class="alert alert-success" role="alert">
+       <%= notice %>
+     </div>
+     <% end %>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <h3 class="text-primary"><%= t('show_student')%></h3>
+        </div>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th><%= t('name') %></th>
+                <td><%= @student.name %></td>
+              </tr>
+              <tr>
+                <th><%= t('under_age') %></th>
+                <td><%= @student.under_age  ? t('yes_word') : t('no_word') %></td>
+              </tr>
+              <tr>
+                <th><%= t('age') %></th>
+                <td><%= @student.age %></td>
+              </tr>
+              <tr>
+                <th><%= t('joining_date') %></th>
+                <td><%= @student.joining_date %></td>
+              </tr>
+              <tr>
+                <th><%= t('image') %></th>
+                <td>
+                  <%=
+                  if @student.image?
+                    image_tag @student.image_url(:show)
+                  else
+                    ""
+                  end
+                  %>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+      <%= link_to t('edit'), edit_student_path(@student) %> |
+      <%= link_to t('back') , students_path %>
+    </div>
+  </div>
+</div>

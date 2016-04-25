@@ -9,8 +9,8 @@
       <div class="login-wrapper">
             <div class="box">
                 <div class="content-wrap">
+                    <img src="<%= asset_url 'logo.png' %>" class="img-login">
                     <h6><%= t('login') %></h6>
-                    <img src="<%= asset_url 'logo.jpg' %>" class="img-login"><br/><br/>
                     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                         <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('email') %>
                         <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: t('password') %>

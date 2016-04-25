@@ -29,6 +29,11 @@ gem 'devise', '~> 3.4.0'
 gem "font-awesome-rails"
 # Mysql2 gem
 gem 'mysql2', '~> 0.3.18'
+# To Upload files
+gem 'rmagick', '2.13.2'
+gem 'carrierwave'
+# Jquery UI gem
+gem 'jquery-ui-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

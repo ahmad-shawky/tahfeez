@@ -1,7 +1,7 @@
 ar:
   app_name: "دار نور الهدي"
   main_page: 'الصفحة الرئيسية'
-  accounts: 'حسابات المستخدمين'
+  accounts: 'المستخدمين'
   edit: 'تعديل'
   add: 'اضافة'
   delete: 'حذف'
@@ -25,3 +25,13 @@ ar:
   login: 'تسجيل الدخول'
   remember_me: 'تذكرني'
   log_out: 'تسجيل الخروج'
+  students: 'الطلاب'
+  new_student: 'طالب جديد'
+  under_age: 'تحت السن ؟'
+  age: 'السن'
+  image: 'الصورة'
+  joining_date: 'تاريخ اﻹلتحاق'
+  show_student: 'اظهار بيانات الطالب'
+  no_word: 'لا'
+  yes_word: 'نعم'
+  edit_student: 'تعديل بيانات طالب'
