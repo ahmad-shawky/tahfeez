@@ -28,7 +28,7 @@ gem 'devise', '~> 3.4.0'
 # Font awsome rails
 gem "font-awesome-rails"
 # Mysql2 gem
-gem "mysql2"
+gem 'mysql2', '~> 0.3.18'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
