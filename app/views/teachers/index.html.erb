@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="content-box-large">
+      <% if notice %>
+      <div class="alert alert-success" role="alert">
+        <%= notice %>
+      </div>
+      <% end %>
+      <div class="col-md-12">
+      <div class="col-md-4">
+        <h3><%= t('list') + " "+ t('teachers') %></h3>
+      </div>
+
+      <div class="col-md-2 pull-left">
+        <a href="<%= new_teacher_path %>" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></a>
+      </div>
+    </div>
+      <div class="panel-body">
+        <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th><%= t('name') %></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @teachers.each do |teacher| %>
+                  <tr>
+                    <td><%= teacher.name %></td>
+                    <td>
+                      <%= link_to teacher, class: 'btn btn-sm btn-default' do %>
+                        <%= fa_icon 'eye' %>
+                      <% end %>
+                      <%= link_to edit_teacher_path(teacher), class: 'btn btn-sm btn-success' do %>
+                        <%= fa_icon 'edit' %>
+                      <% end %>
+                      <%= link_to teacher, method: :delete, data: { confirm: t('are_you_sure') }, class: 'btn btn-sm btn-danger' do %>
+                        <%= fa_icon 'trash-o' %>
+                      <% end %>
+                    </td>
+
+                  </tr>
+                <% end %>
+
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+</div>

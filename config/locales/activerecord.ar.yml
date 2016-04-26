@@ -22,3 +22,13 @@ ar:
               blank: 'برجاء ادخال اﻹسم'
             age:
               blank: 'برجاء ادخال العمر'
+        teacher:
+          attributes:
+            name:
+              blank: 'برجاء ادخال اﻹسم'
+            salary:
+              blank: 'برجاء ادخال المرتب'
+            ssn:
+              blank: 'برجاء ادخال رقم البطاقة'
+            phone_number:
+              blank: 'برجاء ادخال رقم الهاتف'
