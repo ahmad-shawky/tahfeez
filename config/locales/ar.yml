@@ -38,7 +38,7 @@ ar:
   salary: 'المرتب'
   phone_number: 'رقم الهاتف'
   ssn: 'رقم البطاقة'
-  teachers: 'الملعمين'
+  teachers: 'المعلمين'
   new_teacher: 'معلم جديد'
   show_teacher: 'اظهار بيانات المعلم'
   edit_teacher: 'تعديل بيانات المعلم'
