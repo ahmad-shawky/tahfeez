@@ -20,6 +20,7 @@
               <thead>
                 <tr>
                   <th><%= t('name') %></th>
+                  <th><%= t('image') %></th>
                   <th></th>
                 </tr>
               </thead>
@@ -27,6 +28,7 @@
                 <% @students.each do |student| %>
                   <tr>
                     <td><%= student.name %></td>
+                    <td><%= image_tag student.image_url, width: 100, height: 100 %></td>
                     <td>
                       <%= link_to student, class: 'btn btn-sm btn-default' do %>
                         <%= fa_icon 'eye' %>

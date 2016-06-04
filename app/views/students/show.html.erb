@@ -31,6 +31,22 @@
                 <td><%= @student.joining_date %></td>
               </tr>
               <tr>
+                <th><%= t('address') %></th>
+                <td><%= @student.address %></td>
+              </tr>
+              <tr>
+                <th><%= t('contact_phone') %></th>
+                <td><%= @student.contact_phone %></td>
+              </tr>
+              <tr>
+                <th><%= t('school_name') %></th>
+                <td><%= @student.school_name %></td>
+              </tr>
+              <tr>
+                <th><%= t('other_data') %></th>
+                <td><%= @student.other_data %></td>
+              </tr>
+              <tr>
                 <th><%= t('image') %></th>
                 <td>
                   <%=
@@ -43,6 +59,23 @@
                 </td>
               </tr>
             </tbody>
+        </table>
+        <h4 class="text-primary"><%= t 'student_surahs' %></h4>
+        <table class="table table-striped">
+          <thead>
+            <tr class="success">
+              <th><%= t 'number' %></th>
+              <th><%= t 'name' %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @student.surahs.each do |surah| %>
+               <tr>
+                 <td><%= surah.id %></td>
+                 <td><%= surah.name%></td>
+               </tr>
+            <% end %>
+          </tbody>
         </table>
       </div>
       <%= link_to t('edit'), edit_student_path(@student) %> |

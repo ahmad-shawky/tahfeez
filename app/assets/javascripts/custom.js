@@ -25,4 +25,11 @@ $(document).ready(function(){
   */
   $('.datepicker').datepicker({dateFormat: "dd-mm-yy"});
 
+  /*
+  * Hanlde select2
+  */
+  $( ".select2-input" ).select2({
+    theme: "bootstrap"
+  });
+
 });

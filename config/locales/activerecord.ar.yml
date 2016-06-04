@@ -22,6 +22,8 @@ ar:
               blank: 'برجاء ادخال اﻹسم'
             age:
               blank: 'برجاء ادخال العمر'
+            address:
+              blank: 'برجاء ادخال العنوان'
         teacher:
           attributes:
             name:

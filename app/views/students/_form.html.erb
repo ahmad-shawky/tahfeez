@@ -39,6 +39,52 @@
   </div>
 
   <div class="row">
+     <div class="col-md-6">
+        <%= form_group @student.errors, :school_name do %>
+            <label><%= t('school_name') %></label><br/>
+            <%= f.text_field :school_name, class: 'form-control'%>
+            <%= error_tag @student.errors, :school_name %>
+        <% end %>
+     </div>
+     <div class="col-md-6">
+      <%= form_group @student.errors, :address do %>
+          <label><%= t('address') %></label>
+          <%= f.text_field :address, class: 'form-control'%>
+          <%= error_tag @student.errors, :address %>
+      <% end %>
+   </div>
+  </div>
+
+  <div class="row">
+     <div class="col-md-12">
+        <%= form_group @student.errors, :contact_phone do %>
+            <label><%= t('contact_phone') %></label><br/>
+            <%= f.text_field :contact_phone, class: 'form-control'%>
+            <%= error_tag @student.errors, :contact_phone %>
+        <% end %>
+     </div>
+  </div>
+
+  <div class="row">
+     <div class="col-md-12">
+          <%= form_group @student.errors, :student_surah do %>
+              <label><%= t('student_surahs') %></label><br/>
+              <%= f.select :surah_ids , Surah.all.collect {|p| [p.name , p.id]} , {}, {:multiple => true, class: "form-control select2-input surah-input"} %>
+          <% end %>
+     </div>
+  </div>
+
+  <div class="row">
+     <div class="col-md-12">
+        <%= form_group @student.errors, :other_data do %>
+            <label><%= t('other_data') %></label><br/>
+            <%= f.text_area :other_data, class: 'form-control'%>
+            <%= error_tag @student.errors, :other_data %>
+        <% end %>
+     </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-3">
       <%= form_group @student.errors, :image do %>
           <label><%= t('image') %></label>

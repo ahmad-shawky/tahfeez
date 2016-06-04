@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426084435) do
+ActiveRecord::Schema.define(version: 20160604133056) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name"
@@ -32,14 +32,31 @@ ActiveRecord::Schema.define(version: 20160426084435) do
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true
   add_index "accounts", ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
 
+  create_table "student_surahs", force: :cascade do |t|
+    t.integer  "student_id"
+    t.integer  "surah_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade do |t|
     t.string   "name"
     t.string   "image"
     t.boolean  "under_age"
     t.float    "age"
     t.string   "joining_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "contact_phone"
+    t.string   "address"
+    t.string   "school_name"
+    t.text     "other_data"
+  end
+
+  create_table "surahs", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "teachers", force: :cascade do |t|

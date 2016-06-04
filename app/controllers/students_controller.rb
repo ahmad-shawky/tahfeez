@@ -25,6 +25,7 @@ class StudentsController < ApplicationController
   # POST /students
   # POST /students.json
   def create
+    debugger
     @student = Student.new(student_params)
 
     respond_to do |format|
@@ -70,6 +71,7 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:name, :image, :under_age, :age, :joining_date, :image_cache)
+      params.require(:student).permit(:name, :image, :under_age, :age, :joining_date, :image_cache,
+                                      :contact_phone, :address, :school_name, :other_data, surah_ids: [])
     end
 end
